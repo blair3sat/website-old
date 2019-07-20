@@ -1,34 +1,45 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import cn from "classnames"
+import { routes } from "../routes"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
+const Header = ({ siteTitle, location }) => (
+  <nav
+    className="navbar is-spaced"
+    role="navigation"
+    aria-label="main navigation"
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+    <div className="navbar-brand">
+      <Link to="/">
+        {" "}
+        <p className="title">{siteTitle}</p>
+      </Link>
     </div>
-  </header>
+
+    <div className="navbar-end">
+      <div id="navbarBasicExample" className="navbar-menu">
+        <div className="navbar-start">
+          {routes.map((r, i) => (
+            <Link
+              key={i}
+              className={cn(
+                "navbar-item",
+                location
+                  ? location.pathname === r.path
+                    ? ["has-text-primary", "is-spaced"]
+                    : null
+                  : null
+              )}
+              to={r.path}
+            >
+              {r.name}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  </nav>
 )
 
 Header.propTypes = {

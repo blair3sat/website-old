@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+// @import "~bulma/sass/utilities/initial-variables.sass";
+
+// Import a Google Font
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+
+// Set your brand colors
+$purple: #000000;
+$mint: #ff274f;
+
+// Update Bulma's global variables
+$family-sans-serif: "Avenir Next", sans-serif;
+$primary: $mint;
+$link: $mint;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+$title-weight: 700;
+$navbar-padding-horizontal: 7rem;
+$navbar-padding-vertical: 2rem;
+
+// Update some of Bulma's component variables
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// @import "../../node_modules/bulma/bulma.sass";
+
+@import "~bulma/bulma.sass";
