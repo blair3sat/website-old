@@ -4,6 +4,18 @@ import React from "react"
 import cn from "classnames"
 import { routes } from "../routes"
 
+const RouteLink = ({ r, current }) => (
+  <Link
+    className={cn(
+      "navbar-item",
+      current ? ["has-text-primary", "is-spaced"] : null
+    )}
+    to={r.path}
+  >
+    {current ? <strong>{r.name}</strong> : r.name}
+  </Link>
+)
+
 const Header = ({ siteTitle, location }) => (
   <nav
     className="navbar is-spaced"
@@ -21,20 +33,11 @@ const Header = ({ siteTitle, location }) => (
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
           {routes.map((r, i) => (
-            <Link
+            <RouteLink
+              r={r}
               key={i}
-              className={cn(
-                "navbar-item",
-                location
-                  ? location.pathname === r.path
-                    ? ["has-text-primary", "is-spaced"]
-                    : null
-                  : null
-              )}
-              to={r.path}
-            >
-              {r.name}
-            </Link>
+              current={location ? location.pathname === r.path : false}
+            ></RouteLink>
           ))}
         </div>
       </div>
