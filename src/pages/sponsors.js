@@ -1,9 +1,11 @@
 import React from "react"
-// import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Image from "../components/image"
+
+import msbr from "../images/msbr_orig.png"
+import magnet from "../images/magnet.png"
+import overleaf from "../images/overleaf.png"
 
 const Sponsors = props => (
   <Layout location={props.location}>
@@ -20,7 +22,7 @@ const Sponsors = props => (
               <p className="title">Maryland Space Business Roundtable</p>
               <p className="subtitle">Silver</p>
               <figure className="image">
-                <Image filename="msbr_orig.png" />
+                <img alt="" src={msbr} />
               </figure>
               <div className="content">
                 Thanks to MSBR we were able to purchase new electronics for
@@ -36,7 +38,7 @@ const Sponsors = props => (
                 <p className="title">MBHS Magnet Foundation</p>
                 <p className="subtitle">Bronze</p>
                 <p className="has-text-centered">
-                  <Image width="150px" filename="magnet.png" />
+                  <img alt="" width="150px" src={magnet} />
                 </p>
                 <div className="content">
                   Thanks to the MBHS Magnet Foundation we could attend the 2019
@@ -49,7 +51,7 @@ const Sponsors = props => (
                 <p className="title">Overleaf</p>
                 <p className="subtitle">Support</p>
                 <p className="has-text-centered">
-                  <Image width="150px" filename="overleaf.png" />
+                  <img alt="" width="150px" src={overleaf} />
                 </p>
                 <div className="content">
                   Thanks to Overleaf, we have the ability to write our LaTeX

@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+// import Image from "../components/image"
 import SEO from "../components/seo"
 
 import "../sass/mystyles.scss"
@@ -20,8 +20,8 @@ const IndexPage = props => (
     </div>
     <Link to="/page-2/">Go to page 2</Link> */}
     <div className="container has-background-white has-text-centered">
-      <Image
-        filename="blair3sat-logo.png" //{logo}
+      <img
+        src="/images/logo.png"
         alt="Example"
         width="300"
         style={{ marginBottom: "3rem" }}
