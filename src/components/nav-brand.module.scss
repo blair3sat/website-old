@@ -1,0 +1,14 @@
+.navBrand {
+  flex-grow: 1;
+  a {
+    display: flex;
+  }
+  img {
+    width: 4rem;
+    margin: auto;
+  }
+  p {
+    margin: auto;
+    margin-left: 1rem;
+  }
+}

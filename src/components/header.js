@@ -4,6 +4,8 @@ import React from "react"
 import cn from "classnames"
 import { routes } from "../routes"
 
+import styles from "./nav-brand.module.scss"
+
 const RouteLink = ({ r, current }) => (
   <Link
     className={cn(
@@ -16,15 +18,17 @@ const RouteLink = ({ r, current }) => (
   </Link>
 )
 
+console.log(styles.navBrand)
+
 const Header = ({ siteTitle, location }) => (
   <nav
     className="navbar is-spaced"
     role="navigation"
     aria-label="main navigation"
   >
-    <div className="navbar-brand">
+    <div className={cn("navbar-brand", styles.navBrand)}>
       <Link to="/">
-        {" "}
+        <img alt="" src="/images/logo.png"></img>
         <p className="title">{siteTitle}</p>
       </Link>
     </div>

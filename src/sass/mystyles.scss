@@ -27,3 +27,12 @@ $input-shadow: none;
 // @import "../../node_modules/bulma/bulma.sass";
 
 @import "~bulma/bulma.sass";
+
+// HACK: this makes the view bearable on mobile devices, but doesn't show a navbar or any way to navigate
+// TODO: fix responsiveness
+@media only screen and (max-width: 1000px) {
+  .navbar-brand {
+    margin: 1rem;
+    margin-bottom: 3rem;
+  }
+}
