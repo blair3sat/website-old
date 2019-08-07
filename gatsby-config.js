@@ -5,6 +5,7 @@ module.exports = {
     author: `@blair3sat`,
     siteUrl: `https://blair3sat.com`,
     image: `/images/logo.png`,
+    poster: `/pdfs/smallsatPoster.pdf`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

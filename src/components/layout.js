@@ -34,10 +34,15 @@ const Layout = ({ children, location }) => {
         }}
       >
         <main>{children}</main>
-        <footer style={{ margin: "2rem 0 1rem" }}>
-          © Copyright {new Date().getFullYear()} {data.site.siteMetadata.title}.
-        </footer>
       </div>
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            © Copyright {new Date().getFullYear()}{" "}
+            {data.site.siteMetadata.title}.
+          </p>
+        </div>
+      </footer>
     </>
   )
 }
