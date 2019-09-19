@@ -1,18 +1,16 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Document, Page } from "react-pdf"
 
 import Layout from "../components/layout"
 // import Image from "../components/image"
 import SEO from "../components/seo"
 
 import "../sass/mystyles.scss"
-import poster from "../pdfs/smallsatPoster.pdf"
-import missionFlyer from "../pdfs/missionFlyer.pdf"
-import opticalInstrumentFlyer from "../pdfs/opticalInstrumentFlyer.pdf"
-import rfInstrumentFlyer from "../pdfs/rfInstrumentFlyer.pdf"
-import spacecraftFlyer from "../pdfs/spacecraftFlyer.pdf"
-
+import missionFlyer from "../images/missionFlyer.png"
+import opticalInstrumentFlyer from "../images/opticalInstrumentFlyer.png"
+import rfInstrumentFlyer from "../images/rfInstrumentFlyer.png"
+import spacecraftFlyer from "../images/spacecraftFlyer.png"
+import poster from "../images/smallsatPoster.png"
 // import logo from "../images/blair3sat-logo.png"
 
 const IndexPage = props => (
@@ -66,9 +64,7 @@ const IndexPage = props => (
         </div>
         <div class="column is-two-thirds">
           <a href="/pdfs/smallsatPoster.pdf">
-            <Document file={poster}>
-              <Page width={600} pageNumber={1} />
-            </Document>
+            <img src={poster} alt="smallsatPoster"></img>
           </a>
         </div>
       </div>
@@ -77,30 +73,22 @@ const IndexPage = props => (
       <div class="columns is-v-centered">
         <div class="column is-one-fourth" style={{ height: "20rem" }}>
           <a href="/pdfs/missionFlyer.pdf">
-            <Document file={missionFlyer}>
-              <Page width={200} pageNumber={1} />
-            </Document>
+            <img src={missionFlyer} alt="missionFlyer"></img>
           </a>
         </div>
         <div class="column is-one-fourt" style={{ height: "20rem" }}>
           <a href="/pdfs/spacecraftFlyer.pdf">
-            <Document file={spacecraftFlyer}>
-              <Page width={200} pageNumber={1} />
-            </Document>
+            <img src={spacecraftFlyer} alt="spacecraftFlyer"></img>
           </a>
         </div>
         <div class="column is-one-fourth" style={{ height: "20rem" }}>
           <a href="/pdfs/rfInstrumentFlyer.pdf">
-            <Document file={rfInstrumentFlyer}>
-              <Page width={200} pageNumber={1} />
-            </Document>
+            <img src={rfInstrumentFlyer} alt="rfInstrumentFlyer"></img>
           </a>
         </div>
         <div class="column is-one-fourth" style={{ height: "20rem" }}>
           <a href="/pdfs/opticalInstrumentFlyer.pdf">
-            <Document file={opticalInstrumentFlyer}>
-              <Page width={200} pageNumber={1} />
-            </Document>
+            <img src={opticalInstrumentFlyer} alt="opticalInstrumentFlyer"></img>
           </a>
         </div>
       </div>

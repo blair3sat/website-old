@@ -12,34 +12,18 @@ const Mission = props => (
         <p className="title is-2">Our Mission</p>
       </div>
       <p>
-        We plan to measure space weather phenomena that affect how radio waves
-        propagate through the ionosphere with an instrument suite with two
-        payloads, an ionosonde receiver and a photometer. These measurements
-        will have the potential to advance satcom, OTH radar, and geomagnetics
-        research. Our methods and the background science behind them are
-        summarized here, and detailed proposals will be linked here as they
-        become available. For more information about the RF payload, contact
-        instrument lead <a href="mailto:ryan.tse@blair3sat.com">Ryan Tse</a>,
-        and for more information about the optical payload, contact instrument
-        lead <a href="mailto:laura.cui@blair3sat.com">Laura Cui</a>.
+       <b>Our nanosatelite</b> will measure the electron density of the ionosphere to map how radio frequency (RF) waves are affected.
       </p>
       <br />
-      <p className="title is-5" id="rf-payload-ionosonde-receiver">
-        RF Payload (Ionosonde Receiver)
-      </p>
       <p>
-        The ionosphere is a region of the atmosphere that contains charged
-        plasma. The charged material in this region can influence wireless
-        communications since charged plasma refracts radio waves. This has a
-        signficant effect on long distance radio communications and HF radar
-        systems. Mapping the charge density of the ionosphere has been a
-        longstanding scientific objective, as a live map of ionospheric
-        conditions would allow radar systems to more precisely correct for
-        ionospheric effects and would allow communications systems to exploit
-        ionospheric refraction to perform longer range communication with less
-        power. <em>blair3sat</em>’s RF payload will measure ionospheric charge
-        density by observing the refraction of test signals transmitted from
-        ground-based radar sounders called ionosondes.
+      <b>The importance</b> of the ionosphere comes from its wide utilization in 
+      long-distance communications, specifically in over the horizon 
+      (OTH) radars. Gathering detailed information about the ionosphere 
+      helps account for its effects on RF signals, making communication
+       cheaper and more reliable. Mapping the charge density of the ionos
+       phere has been a longstanding scientific objective, and our team’s 
+       unique approach is designed to pave the way for future research.
+
       </p>
       <br />
       <h4 className="title is-5" id="ionosondes">
@@ -65,85 +49,60 @@ const Mission = props => (
         path taken by the signal.
       </p>
       <br />
-      <h4 className="title is-5" id="our-instrument">
-        Our Instrument
+      <h4 className="title is-5" id="our-instruments">
+        Our Instruments
       </h4>
       <p>
-        <em>blair3sat</em> will reduce ambiguity and improve mapping precision
-        by receiving ionosonde signals in space before they reflect and refract
-        back down to the surface. Signals that are totally refracted above
-        <em>blair3sat</em> will be received by the RF payload twice: first from
-        the direct path between the instrument and the ionsonde, and second from
-        signals refracted back down from above the instrument. The time delay
-        between the two times that the signal is received will be processed to
-        map of the ionosphere above the instrument. Signals that are only
-        received once by <em>blair3sat</em> and signals that are recieved by
-        <em>blair3sat</em> but not the ground ionosonde do not allow us to
-        generate complete maps of the ionosphere along their paths, but they do
-        provide rough information about the path taken by the signal.
-        <em>blair3sat</em>’s data will be combined with data from cooperating
-        ionosonde stations, processed, and published.
+      <b>The ionosphere</b> is one of the outermost layers of our atmosphere, filled with
+       ionized gases which reflect radio waves. Additionally, these ionized gases 
+       in the ionosphere produce light in a phenomenon called “airglow.”
+
+      </p>
+      <br />
+      <p>
+      <b>To measure</b> the ionosphere’s environment, our satellite will be equipped with two
+       payloads: the first payload is a photometer, which will measure the airglow so 
+       we can extrapolate data on gas density in the upper atmosphere. Furthermore, we 
+       will refine our data by detecting RF waves with an ionosonde receiver. This other 
+       payload will monitor RF waves we transmit at different frequencies and determine 
+       how they behave in the ionosphere.
+      </p>
+      <br />
+      <p><b>More information</b> about both payloads can be found below. For specific questions 
+        about the ionosonde payload, contact Ryan Tse, and for questions about the photometer 
+        payload, contact Laura Cui. Lastly, for general questions, refer to our team head 
+        Gautom Das.
       </p>
       <br />
       <h3 className="title is-5" id="optical-payload">
-        Optical Payload
+        Photometer (Optical Payload)
       </h3>
       <p>
-        Excited atoms in the ionosphere emit diffuse electromagnetic radiation
-        corresponding to a characteristic spectrum. These emissions are produced
-        by a variety of photochemical processes, and are specific to the ion
-        species and conditions of the ionosphere. Optical measurements can be
-        used to determine the concentration of different species as well as the
-        electron density in a given region. With this data, we can also
-        reconstruct three-dimensional structures, improving predictive models of
-        dynamic processes in the ionosphere. <em>blair3sat</em> will use a
-        limb-viewing photometer to measure variations in airglow intensity over
-        the course of its mission.
+      <b>Airglow</b> provides vital information on the environment of the ionosphere, namely ion
+      density, electron density, and uncharged atom density. Our optical payload will measure
+      the airglow, allowing us to produce a map of vertical electron densities in the ionosphere.
+      Vertical electron density is exactly what it sounds like: electron densities that travel
+      up through the ionosphere rather than across it. Information on vertical electron density
+      is important because most current information about the ionosphere concerns horizontal
+      electron densities. By collecting vertical data, our map of the ionosphere will be more
+      accurate by accounting for all dimensions. Additionally, the photometer in our satellite
+      will be equipped with a unique filter granting it increased sensitivity. Accurate vertical
+      electron density data from this payload will be compounded with the RF payload to make a
+      detailed 3D map of the ionosphere.
+
       </p>
       <br />
-      <h4 className="title is-5" id="airglow-imaging">
-        Airglow Imaging
+      <h4 className="title is-5" id="ionosonde-receiver">
+      Ionosonde Receiver (RF Payload)
       </h4>
       <p>
-        Incoming solar radiation interacts with oxygen and nitrogen atoms in the
-        neutral thermosphere to produce free ions and electrons, which can then
-        participate in a variety of light-producing processes. In particular,
-        during recombination, metastable or long-lasting electron configurations
-        produce diffuse photons with distinct wavelengths. The intensity of the
-        light is proportional to both ion and electron density as well as the
-        emission rate of the transition, which depends on conditions such as
-        temperature and neutral species density. Typically, this is taken as a
-        line integral of the emission rate multiplied by the square of the
-        electron density along the line of sight, allowing us to extract
-        vertical electron density profiles from the data.
-      </p>
-      <br />
-      <p>
-        The use of the extreme ultraviolet airglow spectrum to measure
-        ionospheric activity is well-established. While these emissions can be
-        observed minimal background pollution, they are typically an order of
-        magnitude less sensitive than visible spectrum measurements. Recently,
-        the OI 557.8 nm line has received attention as another candidate for
-        studying ionospheric activity, with the advantages of increased
-        sensitivity and density dependency, which allow additional altitude
-        information to be extracted from the measurements.
-      </p>
-      <br />
-      <h4 className="title is-5" id="our-instrument-1">
-        Our Instrument
-      </h4>
-      <p>
-        <em>blair3sat</em> will use a limb-viewing photometer design combined
-        with a set of passband filters and visible range CCD sensor optimized
-        for observing the 557.8 nm emission. The instrument will be placed at
-        the back of the satellite, and oriented to look slightly downwards
-        towards the horizon. The inclination of the satellite orbit, combined
-        with its altitude near the peak of the daytime F layer, offer the
-        opportunity to observe daily variations over a wide geographical area.
-        Furthermore, by combining and correlating data collected by the optical
-        and RF payloads, we will be able to better characterize the measurements
-        made by each, allowing us to cross-validate our methods and to better
-        understand the behavior of the 557.8 nm emission.
+      <b>Existing ground-based</b> ionosondes don’t provide enough information to accurately map electron
+      densities within the ionosphere. More refined data can be obtained by transmitting signals
+      to an ionosonde receiver in space. That’s where we come in. The ionosonde receiver in our
+      satellite will record test signals relayed from our ground station once on the signal’s
+      path into the ionosphere, and a second time after the signal bounces off the ionosphere
+      back down to earth. The difference in time separating the points of convergence between
+      the satellite and the signal will then be analyzed to develop a precise map of the ionosphere.
       </p>
     </div>
   </Layout>
