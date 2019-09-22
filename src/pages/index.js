@@ -6,11 +6,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import "../sass/mystyles.scss"
-import missionFlyer from "../images/missionFlyer.png"
-import opticalInstrumentFlyer from "../images/opticalInstrumentFlyer.png"
-import rfInstrumentFlyer from "../images/rfInstrumentFlyer.png"
-import spacecraftFlyer from "../images/spacecraftFlyer.png"
-import poster from "../images/smallsatPoster.png"
+import missionFlyer from "../images/missionFlyer.webp"
+import opticalInstrumentFlyer from "../images/opticalInstrumentFlyer.webp"
+import rfInstrumentFlyer from "../images/rfInstrumentFlyer.webp"
+import spacecraftFlyer from "../images/spacecraftFlyer.webp"
+import poster from "../images/smallsatPoster.webp"
 // import logo from "../images/blair3sat-logo.png"
 
 const IndexPage = props => (
@@ -28,7 +28,7 @@ const IndexPage = props => (
         src="/images/logo.png"
         alt="Example"
         width="300"
-        style={{ marginBottom: "3rem" }}
+        style={{ marginBottom: "1rem" }}
       />
       <div className="description" style={{ marginBottom: "3rem" }}>
         <strong>blair3sat</strong> an entirely student-run team at{" "}
