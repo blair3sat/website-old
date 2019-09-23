@@ -71,22 +71,22 @@ const IndexPage = props => (
       <hr />
       <p className="title is-3">Also Check Out Our Flyers Here:</p>
       <div class="columns is-v-centered">
-        <div class="column is-one-fourth" style={{ height: "20rem" }}>
+        <div class="column is-one-fourth pdf">
           <a href="/pdfs/missionFlyer.pdf">
             <img src={missionFlyer} alt="missionFlyer"></img>
           </a>
         </div>
-        <div class="column is-one-fourt" style={{ height: "20rem" }}>
+        <div class="column is-one-fourth pdf" >
           <a href="/pdfs/spacecraftFlyer.pdf">
             <img src={spacecraftFlyer} alt="spacecraftFlyer"></img>
           </a>
         </div>
-        <div class="column is-one-fourth" style={{ height: "20rem" }}>
+        <div class="column is-one-fourth pdf">
           <a href="/pdfs/rfInstrumentFlyer.pdf">
             <img src={rfInstrumentFlyer} alt="rfInstrumentFlyer"></img>
           </a>
         </div>
-        <div class="column is-one-fourth" style={{ height: "20rem" }}>
+        <div class="column is-one-fourth pdf">
           <a href="/pdfs/opticalInstrumentFlyer.pdf">
             <img src={opticalInstrumentFlyer} alt="opticalInstrumentFlyer"></img>
           </a>
