@@ -54,7 +54,7 @@ const IndexPage = props => (
       <hr />
       <br />
       <div class="columns is-v-centered">
-        <div class="column is-one-third" style={{ height: "20rem" }}>
+        <div class="column is-one-third">
           <p className="title is-2">Smallsat 2019</p>
           <div style={{ textAlign: "left" }}>
             blair3sat was lucky enough to present our instrument suite at the
