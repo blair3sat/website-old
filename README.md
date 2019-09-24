@@ -35,7 +35,6 @@ This repo will become the source of further development as Gatsby provides great
 * [ ] Move all the dumb "display components" into one package (in a monorepo)
 * [ ] move all the smart "data components" into a separate package which is tied to the 1. CMS we use and 2. React SSR/SPA framework we use (either Gatsby or Next.js)
 * [ ] Move to Next.js (has much more flexibility than gatsby: can run live or be rendered to static HTML, doesn't use the convoluted node architecture of Gatsby)
-* [ ] Use images as previews for the flyer PDFs instead of loading 1.1MB PDFs in the browser with a mini react PDF renderer.
 * [ ] Improve responsiveness on mobile devices
 * [ ] Possibly generate regular pages from markdown files?
 * [ ] Build a blog system using either Markdown files or a CMS system like Strapi.js or GraphCMS.
