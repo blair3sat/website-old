@@ -511,7 +511,6 @@ th {
 }
 li {
   font-weight: bold;
-  list-style-type: square;
   font-size: 20px;
   text-align: center;
   margin-bottom: calc(1.45rem / 2);
