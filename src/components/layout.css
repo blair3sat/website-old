@@ -238,6 +238,7 @@ h1 {
   line-height: 1.1;
 }
 h2 {
+  text-align: center;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -509,6 +510,11 @@ th {
   font-weight: bold;
 }
 li {
+  //changed this a little
+  font-weight: bold;
+  list-style-type: square;
+  font-size: 20px;
+  text-align: center;
   margin-bottom: calc(1.45rem / 2);
 }
 ol li {
