@@ -69,6 +69,66 @@ const Sponsors = props => (
           </div>
         </div>
       </div>
+      <hr />
+      <h2 className="title is-1">Tiers of Support</h2>
+      
+      <h2 className="title is-2">Steel Support</h2>
+      <ul type="disk">
+        <li>Small Logo on Website</li>
+        <li>Small Logo on Merchandise</li>
+      </ul>
+      <h2 className="title is-2">Bronze - $1000-$2500</h2>
+      <ul>
+        <li>Medium Logo on Website</li>
+        <li>Medium Logo on Merchandise</li>
+        <li>Monthly Updates</li>
+        <li>Optional Presentation</li>
+      </ul>
+      <h2 className="title is-2">Silver - $2500-$10000</h2>
+      <ul>
+        <li>Large Logo on Website</li>
+        <li>Large Logo on Merchandise</li>
+        <li>Monthly Updates</li>
+        <li>Optional Presentation</li>
+      </ul>
+      <h2 className="title is-2">Gold - $10000-$25000</h2>
+      <ul>
+        <li>Large Logo on Website</li>
+        <li>Large Logo on Merchandise</li>
+        <li>Monthly Updates</li>
+        <li>Optional Presentation</li>
+        <li>Optional Team Visit</li>
+        </ul>
+        <h2 className="title is-2">Titanium - $25000-$75000</h2>
+      <ul>
+        <li>Large Logo on Website</li>
+        <li>Large Logo on Merchandise</li>
+        <li>Monthly Updates</li>
+        <li>Optional Position on Board to Influence Decisions</li>
+        <li>Optional Presentation</li>
+        <li>Optional Team Visit</li>
+      </ul>
+      <h2 className="title is-2">Title - $75,000+</h2>
+      <ul>
+        <li>Right to name our CubeSat</li>
+        <li>Large Logo on Website</li>
+        <li>Large Logo on Merchandise</li>
+        <li>Monthly Updates</li>
+        <li>Optional Position on Board to Influence Decisions</li>
+        <li>Optional Presentation</li>
+        <li>Optional Team Visit</li>
+      </ul>
+      <h2 className="title is-2">Title Plus - $150,000+</h2>
+      <ul>
+        <li>Right to Name our Satellite Team</li>
+        <li>Right to Name our CubeSat</li>
+        <li>Large Logo on Website</li>
+        <li>Large Logo on Merchandise</li>
+        <li>Monthly Updates</li>
+        <li>Optional Position on Board to Influence Decisions</li>
+        <li>Optional Presentation</li>
+        <li>Optional Team Visit</li>
+      </ul>
     </div>
   </Layout>
 )
