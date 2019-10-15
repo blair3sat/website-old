@@ -82,7 +82,7 @@ const Sponsors = props => (
         <li>Optional Presentation</li>
         <li>Optional Team Visit</li>
       </ul>
-      <h2 className="title is-2">Title - $75,000+</h2>
+      <h2 className="title is-2">Title - $75,000-150,000</h2>
       <ul>
         <li>Right to name our CubeSat</li>
         <li>Large Logo on Website</li>
@@ -92,6 +92,15 @@ const Sponsors = props => (
         <li>Optional Presentation</li>
         <li>Optional Team Visit</li>
       </ul>
+      <h2 className="title is-2">Titanium - $10000-$75000</h2>
+      <ul>
+          <li>Large Logo on Website</li>
+          <li>Large Logo on Merchandise</li>
+          <li>Monthly Updates</li>
+          <li>Optional Position on Board to Influence Decisions</li>
+          <li>Optional Presentation</li>
+          <li>Optional Team Visit</li>
+        </ul>
       <h2 className="title is-2">Gold - $10000-$25000</h2>
        <ul>
           <li>Large Logo on Website</li>
