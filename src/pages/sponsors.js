@@ -92,7 +92,7 @@ const Sponsors = props => (
         <li>Optional Presentation</li>
         <li>Optional Team Visit</li>
       </ul>
-      <h2 className="title is-2">Titanium - $25000-$75000</h2>
+      <h2 className="title is-2">Titanium - $25,000-$75,000</h2>
       <ul>
           <li>Large Logo on Website</li>
           <li>Large Logo on Merchandise</li>
@@ -101,7 +101,7 @@ const Sponsors = props => (
           <li>Optional Presentation</li>
           <li>Optional Team Visit</li>
         </ul>
-      <h2 className="title is-2">Gold - $10000-$25000</h2>
+      <h2 className="title is-2">Gold - $10,000-$25,000</h2>
        <ul>
           <li>Large Logo on Website</li>
           <li>Large Logo on Merchandise</li>
@@ -109,14 +109,14 @@ const Sponsors = props => (
           <li>Optional Presentation</li>
           <li>Optional Team Visit</li>
         </ul>
-        <h2 className="title is-2">Silver - $2500-$10000</h2>
+        <h2 className="title is-2">Silver - $2,500-$10,000</h2>
       <ul>
         <li>Large Logo on Website</li>
         <li>Large Logo on Merchandise</li>
         <li>Monthly Updates</li>
         <li>Optional Presentation</li>
       </ul>
-      <h2 className="title is-2">Bronze - $1000-$2500</h2>
+      <h2 className="title is-2">Bronze - $1,000-$2,500</h2>
         <ul>
           <li>Medium Logo on Website</li>
           <li>Medium Logo on Merchandise</li>
