@@ -12,7 +12,7 @@ const Mission = props => (
         <p className="title is-2">Our Mission</p>
       </div>
       <p>
-       <b>Our nanosatelite</b> will measure the electron density of the ionosphere to map how radio frequency (RF) waves are affected.
+       <b>Our nanosatellite</b> will measure the electron density of the ionosphere to map how radio frequency (RF) waves are affected.
       </p>
       <br />
       <p>
@@ -20,8 +20,8 @@ const Mission = props => (
       long-distance communications, specifically in over the horizon 
       (OTH) radars. Gathering detailed information about the ionosphere 
       helps account for its effects on RF signals, making communication
-       cheaper and more reliable. Mapping the charge density of the ionos
-       phere has been a longstanding scientific objective, and our team’s 
+       cheaper and more reliable. Mapping the charge density of the ionosphere
+       has been a longstanding scientific objective, and our team’s 
        unique approach is designed to pave the way for future research.
 
       </p>
