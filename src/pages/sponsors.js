@@ -80,7 +80,7 @@ const Sponsors = props => (
                 <p className="title">Nyrad</p>
                 <p className="subtitle">Steel</p>
                 <p className="has-text-centered">
-                  <img alt="" width="150px" src={nyrad} />
+                  <img alt="" src={nyrad} />
                 </p>
                 <div className="content">
                   Thanks to NYRAD, we have bolstered our CSLI application
