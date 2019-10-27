@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import nyrad from "../images/nyrad.png"
 import msbr from "../images/msbr_orig.png"
 import magnet from "../images/magnet.png"
 import overleaf from "../images/overleaf.png"
@@ -67,6 +68,32 @@ const Sponsors = props => (
               <div className="content"></div>
             </article>
           </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          
+        </div>
+        <div class="column">
+        <div className="tile is-parent is-vertical">
+          <article className="tile is-child notification is-info">
+              <p className="title">Nyrad</p>
+              <p className="subtitle">Steel</p>
+              <p className="has-text-centered">
+                <img alt="" width="150px" src={nyrad} />
+              </p>
+              <div className="content">
+                Thanks to NYRAD, we have bolstered our CSLI application
+                with letters of support and established connections 
+                within the aerospace community.
+            </div>
+          </article>
+        </div>
+
+
+        </div>
+        <div class="column">
+          
         </div>
       </div>
       <hr />
