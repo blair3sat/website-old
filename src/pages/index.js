@@ -31,7 +31,7 @@ const IndexPage = props => (
         style={{ marginBottom: "1rem" }}
       />
       <div className="description" style={{ marginBottom: "3rem" }}>
-        <strong>blair3sat</strong> an entirely student-run team at{" "}
+        <strong>blair3sat</strong>, an entirely student-run team at{" "}
         <a href="https://mbhs.edu/">Montgomery Blair High School</a>. We plan to
         submit a proposal for the 2019 CubeSat Launch Initiative{" "}
         <a href="https://www.nasa.gov/content/about-cubesat-launch-initiative">
