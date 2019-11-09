@@ -16,17 +16,18 @@ const links = [
 const NavContainer = styled.nav`
 	text-align: center;
 	position: absolute;
-  background-color: rgba(0, 0, 0, 0.9);
-  height:0; overflow:visible;
+	background-color: rgba(0, 0, 0, 0.9);
+	height: 0;
+	overflow: visible;
 	color: #fff;
 	top: 0px;
 	left: 0px;
 	right: 0px;
 	height: 3em;
 	z-index: 1000;
-  padding: 0em 15%;
-  display: flex;
-  align-items: center;
+	padding: 0em 15%;
+	display: flex;
+	align-items: center;
 
 	.logo {
 		margin-right: auto;

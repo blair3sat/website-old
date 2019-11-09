@@ -4,13 +4,12 @@ import { Button } from "./Button";
 import * as THREE from "three";
 import Link from "next/link";
 
-
 const LandingContainer = styled.section`
 	height: 100vh;
 	position: relative;
 	overflow: hidden;
 
-	background: url("/static/space.jpg");
+	background: url("/space.jpg");
 	background-position: top left;
 	background-size: contain;
 
@@ -54,9 +53,9 @@ const LandingContainer = styled.section`
 		text-align: justify;
 	}
 
-    .actions {
-        margin: auto -1em;
-    }
+	.actions {
+		margin: auto -1em;
+	}
 `;
 
 const StyledLandingLinkContainer = styled.span`
@@ -140,7 +139,7 @@ const LandingLink = ({
 export const Landing = () => {
 	return (
 		<LandingContainer>
-			<img className="globe" src="/static/earth-horizon.jpg"></img>
+			<img className="globe" src="/earth-horizon.jpg"></img>
 			<div className="content">
 				<h1 className="title">
 					We are <br />
@@ -151,8 +150,22 @@ export const Landing = () => {
 					High School paving the way for other high school STEM teams.
 				</p>
 				<div className="actions">
-					<Button className="slide" background="rgba(0, 0, 0, 0)" color="white">Learn more</Button>
-					<Button className="slide" background="rgba(0, 0, 0, 0)" color="white">Support</Button>
+					<Link href="/support">
+						<Button
+							className="slide"
+							background="rgba(0, 0, 0, 0)"
+							color="white">
+							Learn more
+						</Button>
+					</Link>{" "}
+					<Link href="/support">
+						<Button
+							className="slide"
+							background="rgba(0, 0, 0, 0)"
+							color="white">
+							Support
+						</Button>
+					</Link>
 				</div>
 			</div>
 		</LandingContainer>
