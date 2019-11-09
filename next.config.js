@@ -5,7 +5,9 @@ const withMDX = require("@next/mdx")({
 });
 module.exports = withMDX({
   pageExtensions: ["js", "jsx", "md", "mdx"],
-  remarkExtensions: [toc]
+  options: {
+    remarkExtensions: [toc]
+  }
 });
 // // module.exports = withCSS({
 // //   cssModules: true,

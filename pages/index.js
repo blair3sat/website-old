@@ -1,8 +1,8 @@
-import React, { useRef, createRef } from "react";
+import React from "react";
 import Head from "next/head";
 import Nav from "../components/nav";
 
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 import { Landing } from "../components/Landing2.js";
 import { SmallSat } from "../components/Smallsat";
 import { AboutUs } from "../components/AboutUs";
