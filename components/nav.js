@@ -3,14 +3,14 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const links = [
-	{ href: "/", label: "Home" },
-	{ href: "/misson", label: "Our Mission" },
-	{ href: "/support", label: "Support us" },
-	{ href: "/support#sponsors", label: "Sponsors" },
-	{ href: "/blog", label: "Blog" }
+  { href: "/", label: "Home" },
+  { href: "/mission", label: "Our Mission" },
+  { href: "/support", label: "Support us" },
+  { href: "/support#sponsors", label: "Sponsors" },
+  { href: "/blog", label: "Blog" }
 ].map(link => {
-	link.key = `nav-link-${link.href}-${link.label}`;
-	return link;
+  link.key = `nav-link-${link.href}-${link.label}`;
+  return link;
 });
 
 const NavContainer = styled.nav`
@@ -29,41 +29,41 @@ const NavContainer = styled.nav`
 	display: flex;
 	align-items: center;
 
-	.logo {
-		margin-right: auto;
-	}
+  .logo {
+    margin-right: auto;
+  }
 
-	ul {
-		display: flex;
-		justify-content: space-between;
-	}
-	li {
-		display: flex;
-		padding: 6px 8px;
-	}
-	a {
-		color: inherit;
-		text-decoration: none;
-	}
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  li {
+    display: flex;
+    padding: 6px 8px;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 `;
 
 const Nav = () => (
-	<NavContainer>
-		<div className="logo">
-			<Link href="/">
-				<a>Blair3sat</a>
-			</Link>
-		</div>
-		<ul>
-			{links.map(({ key, href, label }) => (
-				<li key={key}>
-					<a href={href}>{label}</a>
-				</li>
-			))}
-		</ul>
+  <NavContainer>
+    <div className="logo">
+      <Link href="/">
+        <a>Blair3sat</a>
+      </Link>
+    </div>
+    <ul>
+      {links.map(({ key, href, label }) => (
+        <li key={key}>
+          <a href={href}>{label}</a>
+        </li>
+      ))}
+    </ul>
 
-		<style jsx>{``}</style>
-	</NavContainer>
+    <style jsx>{``}</style>
+  </NavContainer>
 );
 
 export default Nav;
