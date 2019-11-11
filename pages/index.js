@@ -88,7 +88,7 @@ const Home = () => {
 				<div className="content">
 					<h1 className="title">
 						We are <br />
-						Blair4sat
+						Blair3sat
 					</h1>
 					<p className="desc">
 						An entirely student-run cubesat team at Montgomery Blair
@@ -118,11 +118,11 @@ const Home = () => {
 			<AboutUsContainer>
 				<h2 className="title">Who are we?</h2>
 				<p className="desc">
-					Blair4sat an entirely student-run cubesat team at Montgomery
+					Blair3sat an entirely student-run cubesat team at Montgomery
 					Blair High School. Our satellite will measure charge density
 					and high energy particle emissions in the ionosphere,
 					contributing to radio propagation models and space weather
-					research (and also crash into the ISS, for extra credit).
+					research.
 				</p>
 				<Centered>
 					<Link href="/support">
