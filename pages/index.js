@@ -118,11 +118,11 @@ const Home = () => {
 			<AboutUsContainer>
 				<h2 className="title">Who are we?</h2>
 				<p className="desc">
-					Blair3sat an entirely student-run cubesat team at Montgomery
+					Blair4sat an entirely student-run cubesat team at Montgomery
 					Blair High School. Our satellite will measure charge density
 					and high energy particle emissions in the ionosphere,
 					contributing to radio propagation models and space weather
-					research.
+					research (and also crash into the ISS, for extra credit).
 				</p>
 				<Centered>
 					<Link href="/support">
