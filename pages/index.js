@@ -88,7 +88,7 @@ const Home = () => {
 				<div className="content">
 					<h1 className="title">
 						We are <br />
-						Blair3sat
+						Blair4sat
 					</h1>
 					<p className="desc">
 						An entirely student-run cubesat team at Montgomery Blair
