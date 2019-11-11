@@ -3,14 +3,14 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/mission", label: "Our Mission" },
-  { href: "/support", label: "Support us" },
-  { href: "/support#sponsors", label: "Sponsors" },
-  { href: "/blog", label: "Blog" }
+	{ href: "/", label: "Home" },
+	{ href: "/mission", label: "Our Mission" },
+	{ href: "/support", label: "Support us" },
+	{ href: "/support#sponsors", label: "Sponsors" },
+	{ href: "/blog", label: "Blog" }
 ].map(link => {
-  link.key = `nav-link-${link.href}-${link.label}`;
-  return link;
+	link.key = `nav-link-${link.href}-${link.label}`;
+	return link;
 });
 
 const NavContainer = styled.nav`
@@ -29,41 +29,52 @@ const NavContainer = styled.nav`
 	display: flex;
 	align-items: center;
 
-  .logo {
-    margin-right: auto;
-  }
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+		padding: 1em;
+		right: unset;
+		bottom: 0px;
+		z-index: -1;
 
-  ul {
-    display: flex;
-    justify-content: space-between;
-  }
-  li {
-    display: flex;
-    padding: 6px 8px;
-  }
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
+		.links {
+			flex-direction: column;
+			padding: 0px;
+		}
+	}
+
+	.logo {
+		margin-right: auto;
+	}
+
+	.links {
+		display: flex;
+		justify-content: space-between;
+	}
+	.link {
+		display: flex;
+		padding: 6px 8px;
+	}
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
 `;
 
 const Nav = () => (
-  <NavContainer>
-    <div className="logo">
-      <Link href="/">
-        <a>Blair3sat</a>
-      </Link>
-    </div>
-    <ul>
-      {links.map(({ key, href, label }) => (
-        <li key={key}>
-          <a href={href}>{label}</a>
-        </li>
-      ))}
-    </ul>
-
-    <style jsx>{``}</style>
-  </NavContainer>
+	<NavContainer>
+		<div className="logo">
+			<Link href="/">
+				<a>Blair3sat</a>
+			</Link>
+		</div>
+		<ul className="links">
+			{links.map(({ key, href, label }) => (
+				<li className="link" key={key}>
+					<Link href={href}>{label}</Link>
+				</li>
+			))}
+		</ul>
+	</NavContainer>
 );
 
 export default Nav;

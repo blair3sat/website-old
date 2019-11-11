@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Converter } from "showdown";
-import MissionContent, * as asdf from "../static/mission.mdx";
+import MissionContent, * as asdf from "../mission.mdx";
 import Nav from "../components/nav";
 
 console.log(asdf);
@@ -11,7 +11,7 @@ const MissionContainer = styled.section`
   grid-template-areas:
     "top top"
     "sidebar content";
-  grid-template-rows: 30vh min-content;
+  grid-template-rows: 40vh min-content;
   grid-template-columns: 25% auto;
 
   .content {
@@ -25,7 +25,7 @@ const MissionContainer = styled.section`
 
   .header {
     grid-area: top;
-    background: url("/static/earth-horizon.jpg");
+    background: url("/earth-horizon.jpg");
     background-size: cover;
     background-position-y: center;
 
@@ -58,7 +58,7 @@ const MissionContainer = styled.section`
 const Mission = () => {
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
 
       <MissionContainer>
         <div className="header">
