@@ -6,32 +6,44 @@ import Nav from "../components/nav.js";
 const sponsors = [
 	{
 		name: "Maryland Space Business Roundtable",
-		tier: "silver",
+		tier: "Silver",
 		image: "/msbr_orig-324c71370056ff1e6a0a34f3659dcafd.png",
 		desc:
-			"Thanks to MSBR we were able to purchase new electronics for development."
+			"Thanks to MSBR we were able to purchase new electronics for development.",
+		site: "http://www.mdspace.org/"
 	},
 	{
 		name: "MBHS Magnet Foundation",
-		tier: "bronze",
+		tier: "Bronze",
 		image: "/magnet-7a0f6626331d50517d6be2df2d051931.png",
 		desc:
 			"Thanks to the MBHS Magnet Foundation we could attend the 2019 SmallSat conference.",
-		color: "#701"
+		color: "#701",
+		site: "https://mbhs.edu/departments/magnet/"
 	},
 	{
 		name: "Overleaf",
-		tier: "steel",
+		tier: "Steel",
 		image: "/overleaf-9616755adf07d8ee303b89a18d9598ba.png",
 		desc:
-			"Thanks to MSBR we were able to purchase new electronics for development."
+			"Thanks to MSBR we were able to purchase new electronics for development.",
+		site: "https://www.overleaf.com/"
 	},
 	{
 		name: "Nyrad",
-		tier: "steel",
+		tier: "Steel",
 		image: "/nyrad-306a2879821e4a3f36eae64972c2c670.png",
 		desc:
-			"Thanks to NYRAD, we have bolstered our CSLI application with letters of support and established connections within the aerospace community."
+			"Thanks to NYRAD, we have bolstered our CSLI application with letters of support and established connections within the aerospace community.",
+		site: "https://nyradspace.com/"
+	},
+	{
+		name: "Micro Aerospace Solultions",
+		tier: "Support",
+		image: "/MicroALogo.png",
+		desc: 
+			"Thanks to Micro Aerospace we were able to strengthen our CSLI application with letters of support, and have a greater understanding of the aerospace industry as a whole.",
+		site: "https://www.micro-a.net/"
 	}
 ];
 
@@ -244,7 +256,7 @@ const SponsorLogo = styled.div`
 		background-repeat: no-repeat;
 	}
 `;
-const Sponsor = ({ sponsor: { name, tier, image, desc, color = "#fff" } }) => {
+const Sponsor = ({ sponsor: { name, tier, image, desc, color = "#fff", site } }) => {
 	return (
 		<SponsorCard>
 			<SponsorLogo color={color} src={image}>
@@ -257,7 +269,9 @@ const Sponsor = ({ sponsor: { name, tier, image, desc, color = "#fff" } }) => {
 				</div>
 				<div className="desc">{desc}</div>
 			</div>
-			{/* <div className="visit">Visit site</div> */}
+			{<div>
+				<a href = {site}>Visit Site</a>
+			</div>}
 		</SponsorCard>
 	);
 };
