@@ -5,7 +5,9 @@ import { Button } from "../components/Button";
 import Nav from "../components/nav";
 import { SmallSat } from "../components/Smallsat";
 
-const LandingContainer = styled.section`
+import { LandingContainer } from "../components/Landing";
+
+/* const LandingContainer = styled.section`
 	height: 100vh;
 	position: relative;
 	overflow: hidden;
@@ -53,23 +55,70 @@ const LandingContainer = styled.section`
 	.actions {
 		margin: auto -1em;
 	}
-`;
+`; */
 const AboutUsContainer = styled.section`
-	min-height: 100vh;
-	padding: 5em 10%;
+	background-color: #eee;
+	overflow: auto;
 
-	.title {
-		font-size: 3em;
-		text-align: center;
-	}
-
-	.desc {
-		width: 70%;
-		margin: auto;
-		color: rgba(0, 0, 0, 0, 75);
+	.item {
+		padding: 3em 10%;
 		font-size: 1.25em;
-		line-height: 1.8;
-		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		overflow: visible;
+
+		.title {
+			margin: 0px;
+		}
+
+		hr {
+			margin: 1.25em 0em;
+			border: none;
+			box-shadow: none;
+			width: 3em;
+			height: 6px;
+			background-color: #4b4;
+
+		}
+
+		.text {
+			margin: 0em;
+		}
+
+		.desc {
+			background-color: #fff;
+			padding: 3em;
+			box-shadow: 3px 3px 30px 0px rgba(0, 0, 0, 0.15);
+
+			padding-right: 7em;
+			flex-basis: 50%;
+		}
+
+		.image {
+			flex-basis: 25%;
+			display: block;
+			width: 300px;
+			height: 400px;
+			margin: 3em -4em -4em -4em;
+			box-shadow: 3px 3px 40px 0px rgba(0, 0, 0, 0.15);
+		}
+		.actions {
+			margin-top: 1em;
+			button {
+				margin-left: 0px;
+				margin-bottom: 0px;
+			}
+		}
+
+		&:nth-child(2n) {
+			flex-direction: row-reverse;
+			.desc {
+				padding: 3em;
+
+				padding-left: 7em;
+			}
+		}
 	}
 `;
 
@@ -84,18 +133,15 @@ const Home = () => {
 		<>
 			<Nav />
 			<LandingContainer>
-				<img className="globe" src="/earth-horizon.jpg"></img>
+				<img className="globe" src="/earth8.jpg"></img>
 				<div className="content">
-					<h1 className="title">
-						We are <br />
-						Blair3sat
-					</h1>
-					<p className="desc">
+					<h1 className="title animated">Blair3sat</h1>
+					<p className="desc animated">
 						An entirely student-run cubesat team at Montgomery Blair
 						High School paving the way for other high school STEM
 						teams.
 					</p>
-					<div className="actions">
+					<div className="actions animated">
 						<Link href="/support">
 							<Button
 								className="slide"
@@ -116,57 +162,76 @@ const Home = () => {
 				</div>
 			</LandingContainer>
 			<AboutUsContainer>
-				<h2 className="title">Who are we?</h2>
-				<p className="desc">
-					Blair3sat an entirely student-run cubesat team at Montgomery
-					Blair High School. Our satellite will measure charge density
-					and high energy particle emissions in the ionosphere,
-					contributing to radio propagation models and space weather
-					research.
-				</p>
-				<Centered>
-					<Link href="/support">
-						<Button
-							className="scale"
-							color="white"
-							background="#090">
-							Help us get to space
-						</Button>
-					</Link>
-				</Centered>
+				<div className="item">
+					<div className="desc">
+						<h2 className="title">Who are we?</h2>
+						<hr/>
+						<p className="text">
+							Blair3sat an entirely student-run cubesat team at
+							Montgomery Blair High School. Our satellite will
+							measure charge density and high energy particle
+							emissions in the ionosphere, contributing to radio
+							propagation models and space weather research.
+						</p>
+						<div className="actions">
+							<Link href="/support">
+								<Button
+									className="scale"
+									color="white"
+									background="#090">
+									Help us get to space
+								</Button>
+							</Link>
+						</div>
+					</div>
+					<img
+						src="https://via.placeholder.com/300x400"
+						alt=""
+						className="image"
+					/>
+				</div>
 
 				<br />
 				<br />
 				<br />
 				<br />
 
-				<h2 className="title">Our Mission</h2>
-				<p className="desc">
-					Our nanosatellite will measure the electron density of the
-					ionosphere to map how radio frequency (RF) waves are
-					affected. The importance of the ionosphere comes from its
-					wide utilization in long-distance communications,
-					specifically in over the horizon (OTH) radars. Gathering
-					detailed information about the ionosphere helps account for
-					its effects on RF signals, making communication cheaper and
-					more reliable. Mapping the charge density of the ionosphere
-					has been a longstanding scientific objective, and our team’s
-					unique approach is designed to pave the way for future
-					research.
-				</p>
-
-				<Centered>
-					<Link href="/mission">
-						<Button
-							className="scale"
-							color="white"
-							background="#090">
-							Learn more
-						</Button>
-					</Link>
-				</Centered>
+				<div className="item">
+					<div className="desc">
+						<h2 className="title">Our mission</h2>
+						<hr/>
+						<p className="text">
+							Our nanosatellite will measure the electron density
+							of the ionosphere to map how radio frequency (RF)
+							waves are affected. The importance of the ionosphere
+							comes from its wide utilization in long-distance
+							communications, specifically in over the horizon
+							(OTH) radars. Gathering detailed information about
+							the ionosphere helps account for its effects on RF
+							signals, making communication cheaper and more
+							reliable. Mapping the charge density of the
+							ionosphere has been a longstanding scientific
+							objective, and our team’s unique approach is
+							designed to pave the way for future research.
+						</p>
+						<div className="actions">
+							<Link href="/mission">
+								<Button
+									className="scale"
+									color="white"
+									background="#090">
+									Learn More
+								</Button>
+							</Link>
+						</div>
+					</div>
+					<img
+						src="https://via.placeholder.com/300x400"
+						alt=""
+						className="image"
+					/>
+				</div>
 			</AboutUsContainer>
-			<hr />
 			<SmallSat />
 		</>
 	);

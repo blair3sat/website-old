@@ -1,0 +1,72 @@
+Home:
+- Landing
+- About
+- Team
+- Sponsors
+- Contact
+
+Mission:
+- TOC
+- Contents
+
+Support:
+- Sponsors
+- Tiers
+
+Blog:
+- Most Recent
+- Recent Posts
+
+- Post
+
+Todo:
+    - RSS feed
+    - Fix _document
+    - Add support:
+        - Go fund me
+        - Contact
+        - Tiers
+        - Sponsors
+    - Posts
+        - Creation:
+            - CLI + UI
+            - MDX
+        - Page
+            - [Post] page
+            - Recent posts
+        - Posts
+            - Newsletter
+            - Smallsat
+            - CSLI
+            - Sponsorship
+    - Fix navbar
+        - Better styles/layout
+        - Blair3sat logo
+    - Fix support us button
+    - Fix landing
+        - Add paralax
+        - Add button actions
+        - Add section links
+        - Fix intro paragraphs
+        - Add help us box
+        - Remove duplicated space
+    - Add share:
+        - Social media
+        - Gofund me
+    - Fix mission
+        - Table of Contents
+        - Better layout
+        - Permalinks too
+    - Content:
+        - Mission
+        - About us
+        - Smallsat
+        - Fliers
+        - CSLI
+        - RF/Optical papers
+    - Add mobile
+        - Better layout
+        - Sidebar
+    - Responsiveness
+    - Add CD/CI (for ssg)
+    - Add 404

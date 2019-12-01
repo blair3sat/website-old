@@ -12,8 +12,8 @@ postsData.forEach(post => {
 
 const PostPreview = styled.div`
     border: 1.15px solid rgba(0, 0, 0, 0.15);
-    /* flex: 0 0 40%; */
-	/* border-radius: 5px; */
+
+	flex: 0 0 30%;
 
 	position: relative;
 
@@ -133,38 +133,38 @@ const blogPage = ({ posts = postsData }) => (
 
 // Before page loads await the dynamic components. prevents blog preview page flash.
 blogPage.getInitialProps = async () => {
-	await Promise.all(
-		postsData.map(async post => {
-			const file = await post.file;
-			post.BlogPost = file.default;
-			post.meta = file.meta;
-			return post;
-		})
-	);
+	// await Promise.all(
+	// 	postsData.map(async post => {
+	// 		const file = await post.file;
+	// 		post.BlogPost = file.default;
+	// 		post.meta = file.meta;
+	// 		return post;
+	// 	})
+	// );
 
-	// postsData.forEach(a => {
-	// 	a.meta = {
-	// 		author: "Andrew Lisowski",
-	// 		authorLink: "https://github.intuit.com/alisowski",
-	// 		avatar:
-	// 			"https://avatars2.githubusercontent.com/u/1192452?s=400&v=4",
-	// 		publishDate: "2018-05-10T12:00:00Z",
-	// 		title: "First Post"
-	// 	};
-	// 	a.BlogPost = () => (
-	// 		<div>
-	// 			<h1>Hello</h1>
-	// 			<p>lorem ipusm dolor sit amet</p>
-	// 			<p>asdfasdf</p>
-	// 			<h2>asdfasdfasd</h2>
-	// 			<h2>asdfasdfasd</h2>
-	// 			<h2>asdfasdfasd</h2>
-	// 			<h2>asdfasdfasd</h2>
-	// 			<h2>asdfasdfasd</h2>
-	// 			<h2>asdfasdfasd</h2>
-	// 		</div>
-	// 	);
-	// });
+	postsData.forEach(a => {
+		a.meta = {
+			author: "Andrew Lisowski",
+			authorLink: "https://github.intuit.com/alisowski",
+			avatar:
+				"https://avatars2.githubusercontent.com/u/1192452?s=400&v=4",
+			publishDate: "2018-05-10T12:00:00Z",
+			title: "First Post"
+		};
+		a.BlogPost = () => (
+			<div>
+				<h1>Hello</h1>
+				<p>lorem ipusm dolor sit amet</p>
+				<p>asdfasdf</p>
+				<h2>asdfasdfasd</h2>
+				<h2>asdfasdfasd</h2>
+				<h2>asdfasdfasd</h2>
+				<h2>asdfasdfasd</h2>
+				<h2>asdfasdfasd</h2>
+				<h2>asdfasdfasd</h2>
+			</div>
+		);
+	});
 
 	return { posts: [...postsData] };
 };
