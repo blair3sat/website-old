@@ -100,8 +100,6 @@ const BlogIndexContainer = styled.div`
   .post-list {
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
   }
 `;
 const PageContainer = styled.section`

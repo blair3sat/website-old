@@ -6,6 +6,8 @@ import Nav from "../components/nav";
 
 import { SupportButton } from "../components/Button";
 
+// const AlwaysSupport = S/
+
 const Global = createGlobalStyle`
 	body {
 			margin: 0px;
@@ -19,46 +21,39 @@ const Global = createGlobalStyle`
 `;
 
 export default class MyDocument extends Document {
-	static getInitialProps({ renderPage }) {
-		const sheet = new ServerStyleSheet();
-		const page = renderPage(App => props =>
-			sheet.collectStyles(<App {...props} />)
-		);
-		const styleTags = sheet.getStyleElement();
-		return { ...page, styleTags };
-	}
+  static getInitialProps({ renderPage }) {
+    const sheet = new ServerStyleSheet();
+    const page = renderPage(App => props =>
+      sheet.collectStyles(<App {...props} />)
+    );
+    const styleTags = sheet.getStyleElement();
+    return { ...page, styleTags };
+  }
 
-	render() {
-		return (
-			<html>
-				<Head>
-					{/* <title>Blair3sat</title> */}
-					<link rel="icon" href="/favicon.ico" />
-					<link
-						href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:600"
-						rel="stylesheet"
-					/>
-					{this.props.styleTags}
-					<meta
-						name="viewport"
-						content="width=device-width, initial-scale=1"
-					/>
-				</Head>
-				<body>
-					<Global />
-					<Link href="/support">
-						<SupportButton
-							className="scale"
-							background="#090"
-							color="#fff">
-							Support us
-						</SupportButton>
-					</Link>
-					{/* <Nav></Nav> */}
-					<Main />
-					<NextScript />
-				</body>
-			</html>
-		);
-	}
+  render() {
+    return (
+      <html>
+        <Head>
+          {/* <title>Blair3sat</title> */}
+          <link rel="icon" href="/favicon.ico" />
+          <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:600"
+            rel="stylesheet"
+          />
+          {this.props.styleTags}
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Head>
+        <body>
+          <Global />
+          <Main />
+          <Link href="/support">
+            <SupportButton className="scale" background="#090" color="#fff">
+              Support us
+            </SupportButton>
+          </Link>
+          <NextScript />
+        </body>
+      </html>
+    );
+  }
 }

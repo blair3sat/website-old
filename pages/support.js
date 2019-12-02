@@ -50,114 +50,93 @@ const sponsors = [
 
 const tierInfo = [
   [
-    "gold",
+    "Title plus",
     {
-      color: "#dFb700",
-      benefits: [
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor"
-      ],
+      // color: "#dFb700",
+      benefits: `Right to Name our Satellite Team
+				Right to Name our CubeSat
+				Large Logo on Website
+				Large Logo on Merchandise
+				Monthly Updates
+				Optional Position on Board to Influence Decisions
+				Optional Presentation
+				Optional Team Visit`,
       price: 300
     }
   ],
   [
-    "gold",
+    "Title",
     {
-      color: "#dFb700",
-      benefits: [
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor"
-      ],
+      // color: "#dFb700",
+      benefits: `
+        Right to name our CubeSat
+        Large Logo on Website
+        Large Logo on Merchandise
+        Monthly Updates
+        Optional Position on Board to Influence Decisions
+        Optional Presentation
+        Optional Team Visit`,
       price: 300
     }
   ],
   [
-    "gold",
+    "Titanium",
     {
-      color: "#dFb700",
-      benefits: [
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor"
-      ],
+      // color: "#dFb700",
+      benefits: `
+        Large Logo on Website
+        Large Logo on Merchandise
+        Monthly Updates
+        Optional Position on Board to Influence Decisions
+        Optional Presentation
+        Optional Team Visit`,
       price: 300
     }
   ],
   [
-    "gold",
+    "Gold",
     {
-      color: "#dFb700",
-      benefits: [
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor"
-      ],
+      // color: "#dFb700",
+      benefits: `
+        Large Logo on Website
+        Large Logo on Merchandise
+        Monthly Updates
+        Optional Presentation
+        Optional Team Visit`,
       price: 300
     }
   ],
   [
-    "gold",
+    "Silver",
     {
-      color: "#dFb700",
-      benefits: [
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor"
-      ],
+      // color: "#dFb700",
+      benefits: `
+        Large Logo on Website
+        Large Logo on Merchandise
+        Monthly Updates
+        Optional Presentation`,
       price: 300
     }
   ],
   [
-    "gold",
+    "Bronze",
     {
-      color: "#dFb700",
-      benefits: [
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor"
-      ],
+      // color: "#dFb700",
+      benefits: `
+        Medium Logo on Website
+        Medium Logo on Merchandise
+        Monthly Updates
+        Optional Presentation`,
       price: 300
     }
   ],
   [
-    "gold",
+    "Steel",
     {
-      color: "#dFb700",
-      benefits: [
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor",
-        "Lorem ipsum dolor"
-      ],
+      // color: "#dFb700",
+      benefits: `
+        Small Logo on Website
+        Small Logo on Merchandise`,
       price: 300
     }
   ]
@@ -353,7 +332,10 @@ const TierContainer = styled.div`
   }
   .benefits {
     list-style-type: none;
+    line-height: 1.8;
+    color: #666;
     padding: 0px;
+    text-align: center;
   }
   .callToAction {
   }
@@ -366,15 +348,18 @@ const TierCard = styled(TierContainer)`
     width: 100%;
   }
 
-  :nth-child(1) {
+  &:nth-child(1) {
     order: 2;
+    height: calc(100% + 4em);
+    border: 3px solid rgba(0, 153, 0, 0.75);
   }
 
-  :nth-child(2) {
+  &:nth-child(2) {
     order: 1;
+    height: calc(100% + 2em);
   }
-  :nth-child(3) {
-    order: calc(100%);
+  &:nth-child(3) {
+    order: 3;
   }
 `;
 const TierRow = styled(TierContainer)`
@@ -382,6 +367,10 @@ const TierRow = styled(TierContainer)`
   width: 80%;
   margin: 2em auto;
   padding: 1em 4em;
+
+  * {
+    flex: 25% 0 0;
+  }
 `;
 
 const Benefit = styled.li``;
@@ -409,7 +398,7 @@ export default () => {
                   <h2 className="pricing">{info.price}</h2>
                   <hr />
                   <ul className="benefits">
-                    {info.benefits.map(b => (
+                    {info.benefits.split("\n").map(b => (
                       <Benefit>{b}</Benefit>
                     ))}
                   </ul>
@@ -430,7 +419,7 @@ export default () => {
                 <h3 className="tier-name">{name}</h3>
                 <h2 className="pricing">{info.price}</h2>
                 <ul className="benefits">
-                  {info.benefits.map(b => (
+                  {info.benefits.split("\n").map(b => (
                     <Benefit>{b}</Benefit>
                   ))}
                 </ul>
