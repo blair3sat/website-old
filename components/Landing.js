@@ -5,7 +5,6 @@ import * as THREE from "three";
 import Link from "next/link";
 
 const fadeInUp = keyframes`
-
 	from {
 		transform: translate3d(0,40px,0)
 	}
@@ -21,7 +20,7 @@ export const LandingContainer = styled.section`
   position: relative;
   overflow: hidden;
 
-  background: #000;
+  background: #020307;
   color: #eee;
   z-index: 2;
 
@@ -31,7 +30,7 @@ export const LandingContainer = styled.section`
 
     left: 50%;
     right: 0px;
-    bottom: 45%;
+    bottom: 50%;
 
     transform: scaleY(-1) translateX(-50%);
 
@@ -45,7 +44,7 @@ export const LandingContainer = styled.section`
     text-align: center;
 
     position: absolute;
-    bottom: 12em;
+    top: calc(50% - 4em);
     left: 0;
     right: 0;
   }

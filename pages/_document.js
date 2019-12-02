@@ -6,19 +6,9 @@ import Nav from "../components/nav";
 
 import { SupportButton } from "../components/Button";
 
-// const AlwaysSupport = S/
+// const Global = createGlobalStyle`
 
-const Global = createGlobalStyle`
-	body {
-			margin: 0px;
-			font-family: Arial,sans-serif;
-			font-weight: light;
-			h1, h2, h3, h4, h5, h6 {
-				font-family: "Montserrat";
-			}
-			overflow-x: hidden;
-		}
-`;
+// `;
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -44,7 +34,17 @@ export default class MyDocument extends Document {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         <body>
-          <Global />
+          <style>
+            {`body {
+              margin: 0px;
+              font-family: Arial,sans-serif;
+              font-weight: light;
+              h1, h2, h3, h4, h5, h6 {
+                font-family: "Montserrat";
+              }
+              overflow-x: hidden;
+            }`}
+          </style>
           <Main />
           <Link href="/support">
             <SupportButton className="scale" background="#090" color="#fff">

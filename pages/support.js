@@ -142,12 +142,28 @@ const tierInfo = [
   ]
 ];
 
+const benefits = new Set(
+  tierInfo.reduce(
+    (a, b) => a.concat(b[1].benefits.split("\n").map(a => a.trim())),
+    []
+  )
+);
+
 const topTiers = [0, 1, 2];
 
 const SupportContainer = styled.section`
   min-height: 100vh;
   background-color: #f4f4f4;
   overflow: auto;
+
+  hr.all {
+    margin: 0.5em auto;
+    border: none;
+    box-shadow: none;
+    width: 50%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 
   .section-title {
     font-size: 3em;
@@ -368,8 +384,13 @@ const TierRow = styled(TierContainer)`
   margin: 2em auto;
   padding: 1em 4em;
 
-  * {
-    flex: 25% 0 0;
+  .tier-name {
+  }
+  .pricing {
+  }
+  .benefits {
+  }
+  .call-to-action {
   }
 `;
 
@@ -413,6 +434,8 @@ export default () => {
                 </TierCard>
               ))}
           </div>
+          <hr className="all" />
+          {/* <hr className="all" /> */}
           <div className="all-pricing">
             {tierInfo.map(([name, info]) => (
               <TierRow>
