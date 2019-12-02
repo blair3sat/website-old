@@ -69,64 +69,61 @@ const fadeInUp = keyframes`
 `;
 
 export const LandingContainer = styled.section`
-	height: 100vh;
-	position: relative;
-	overflow: hidden;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 
-	background: #000;
-	color: #eee;
+  background: #000;
+  color: #eee;
 
-	.globe {
-		width: 55vw;
-		position: absolute;
+  .globe {
+    width: 55vw;
+    position: absolute;
 
-		left: 50%;
-		right: 0px;
-		bottom: 45%;
+    left: 50%;
+    right: 0px;
+    bottom: 45%;
 
-		transform: scaleY(-1) translateX(-50%);
+    transform: scaleY(-1) translateX(-50%);
 
-		pointer-events: none;
-	}
+    pointer-events: none;
+  }
 
-	.content {
-		width: 60%;
-		margin: auto;
+  .content {
+    width: 60%;
+    margin: auto;
 
-		text-align: center;
+    text-align: center;
 
-		position: absolute;
-		bottom: 12em;
-		left: 0;
-		right: 0;
+    position: absolute;
+    bottom: 12em;
+    left: 0;
+    right: 0;
+  }
 
+  .animated {
+    opacity: 0;
+    animation: ${fadeInUp};
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
 
-	}
+  .title {
+    text-align: inherit;
+    font-family: "Montserrat", sans-serif;
+    font-size: 4em;
+    margin: 0px;
 
-	.animated {
-		opacity: 0;
-		animation: ${fadeInUp};
-		animation-duration: 1s;
-		animation-fill-mode: both;
-	}
+    animation-delay: 0s;
+  }
 
-	.title {
-		text-align: inherit;
-		font-family: "Montserrat", sans-serif;
-		font-size: 4em;
-		margin: 0px;
+  .desc {
+    font-family: Arial, sans-serif;
+    animation-delay: 0.15s;
+  }
 
-		animation-delay: 0s;
-	}
-
-	.desc {
-		font-family: Arial, sans-serif;
-		text-align: justify;
-		animation-delay: 0.15s;
-	}
-
-	.actions {
-		margin: auto -1em;
-		animation-delay: 0.3s;
-	}
+  .actions {
+    margin: auto -1em;
+    animation-delay: 0.3s;
+  }
 `;

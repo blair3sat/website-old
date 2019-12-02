@@ -2,31 +2,31 @@
 export default [
   {
     "filePath": "pages/blog/hello-world copy 2.mdx",
-    "urlPath": "\\blog\\blog\\hello-world copy 2",
+    "urlPath": "/blog/blog/hello-world copy 2",
     "title": "First Post",
     "publishDate": "2018-05-10T12:00:00.000Z"
   },
   {
     "filePath": "pages/blog/hello-world copy 3.mdx",
-    "urlPath": "\\blog\\blog\\hello-world copy 3",
+    "urlPath": "/blog/blog/hello-world copy 3",
     "title": "First Post",
     "publishDate": "2018-05-10T12:00:00.000Z"
   },
   {
     "filePath": "pages/blog/hello-world copy 4.mdx",
-    "urlPath": "\\blog\\blog\\hello-world copy 4",
+    "urlPath": "/blog/blog/hello-world copy 4",
     "title": "First Post",
     "publishDate": "2018-05-10T12:00:00.000Z"
   },
   {
     "filePath": "pages/blog/hello-world copy.mdx",
-    "urlPath": "\\blog\\blog\\hello-world copy",
+    "urlPath": "/blog/blog/hello-world copy",
     "title": "First Post",
     "publishDate": "2018-05-10T12:00:00.000Z"
   },
   {
     "filePath": "pages/blog/hello-world.mdx",
-    "urlPath": "\\blog\\blog\\hello-world",
+    "urlPath": "/blog/blog/hello-world",
     "title": "First Post",
     "publishDate": "2018-05-10T12:00:00.000Z"
   }
