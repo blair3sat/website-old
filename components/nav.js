@@ -5,8 +5,8 @@ import styled from "styled-components";
 const links = [
 	{ href: "/", label: "Home" },
 	{ href: "/mission", label: "Our Mission" },
-	{ href: "/support", label: "Support us" },
-	{ href: "/support#sponsors", label: "Sponsors" },
+	{ href: "/support#support", label: "Support us" },
+	{ href: "/support", label: "Sponsors" },
 	{ href: "/blog", label: "Blog" }
 ].map(link => {
 	link.key = `nav-link-${link.href}-${link.label}`;
@@ -15,7 +15,6 @@ const links = [
 
 const NavContainer = styled.nav`
 	text-align: center;
-	position: absolute;
 	background-color: rgba(0, 0, 0, 0.9);
 	height: 0;
 	overflow: visible;

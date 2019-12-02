@@ -1,9 +1,9 @@
 Home:
 - Landing
-- About
-- Team
-- Sponsors
-- Contact
+- About @
+- Team *
+- Sponsors *
+- Contact *
 
 Mission:
 - TOC
@@ -21,12 +21,17 @@ Blog:
 
 Todo:
     - RSS feed
+    - Responsiveness:
+        - Layout
+        - Sidebar
     - Fix _document
-    - Add support:
+    - Fix buttons
+    - About:
+        - Add support CTA
+    - Smallsat
+    - Support:
         - Go fund me
         - Contact
-        - Tiers
-        - Sponsors
     - Posts
         - Creation:
             - CLI + UI
@@ -34,22 +39,14 @@ Todo:
         - Page
             - [Post] page
             - Recent posts
-        - Posts
-            - Newsletter
-            - Smallsat
-            - CSLI
-            - Sponsorship
     - Fix navbar
         - Better styles/layout
         - Blair3sat logo
+        - Responsive
     - Fix support us button
     - Fix landing
         - Add paralax
-        - Add button actions
-        - Add section links
-        - Fix intro paragraphs
-        - Add help us box
-        - Remove duplicated space
+        - Add scroll indicator
     - Add share:
         - Social media
         - Gofund me
@@ -64,9 +61,6 @@ Todo:
         - Fliers
         - CSLI
         - RF/Optical papers
-    - Add mobile
-        - Better layout
-        - Sidebar
-    - Responsiveness
     - Add CD/CI (for ssg)
     - Add 404
+    - Add back to top

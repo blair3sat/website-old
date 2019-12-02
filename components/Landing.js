@@ -77,14 +77,14 @@ export const LandingContainer = styled.section`
 	color: #eee;
 
 	.globe {
-		width: 50vw;
+		width: 55vw;
 		position: absolute;
 
 		left: 50%;
 		right: 0px;
-		bottom: 0px;
+		bottom: 45%;
 
-		transform: scaleY(-1) translate(-50%, 65%);
+		transform: scaleY(-1) translateX(-50%);
 
 		pointer-events: none;
 	}
@@ -96,7 +96,7 @@ export const LandingContainer = styled.section`
 		text-align: center;
 
 		position: absolute;
-		bottom: 10em;
+		bottom: 12em;
 		left: 0;
 		right: 0;
 
@@ -127,6 +127,6 @@ export const LandingContainer = styled.section`
 
 	.actions {
 		margin: auto -1em;
-		animation-delay: 0.4s;
+		animation-delay: 0.3s;
 	}
 `;

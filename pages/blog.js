@@ -6,9 +6,9 @@ import Nav from "../components/nav";
 import postsData from "../posts";
 
 // Dynamically import the blog posts
-postsData.forEach(post => {
-	post.file = import("../pages" + post.filePath.replace("pages", ""));
-});
+// postsData.forEach(post => {
+// 	post.file = import("../pages" + post.filePath.replace("pages", ""));
+// });
 
 const PostPreview = styled.div`
     border: 1.15px solid rgba(0, 0, 0, 0.15);

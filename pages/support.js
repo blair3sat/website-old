@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import Nav from "../components/nav.js";
+import { Button } from "../components/button";
 
 const sponsors = [
 	{
@@ -41,7 +42,7 @@ const sponsors = [
 		name: "Micro Aerospace Solultions",
 		tier: "Support",
 		image: "/MicroALogo.png",
-		desc: 
+		desc:
 			"Thanks to Micro Aerospace we were able to strengthen our CSLI application with letters of support, and have a greater understanding of the aerospace industry as a whole.",
 		site: "https://www.micro-a.net/"
 	}
@@ -65,18 +66,18 @@ const tierInfo = [
 		}
 	],
 	[
-		"silver",
+		"gold",
 		{
-			color: "#EFC700",
-			benefits: [],
-			price: 300
-		}
-	],
-	[
-		"bronze",
-		{
-			color: "#EFC700",
-			benefits: [],
+			color: "#dFb700",
+			benefits: [
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor"
+			],
 			price: 300
 		}
 	],
@@ -97,18 +98,18 @@ const tierInfo = [
 		}
 	],
 	[
-		"silver",
+		"gold",
 		{
-			color: "#EFC700",
-			benefits: [],
-			price: 300
-		}
-	],
-	[
-		"bronze",
-		{
-			color: "#EFC700",
-			benefits: [],
+			color: "#dFb700",
+			benefits: [
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor"
+			],
 			price: 300
 		}
 	],
@@ -129,30 +130,57 @@ const tierInfo = [
 		}
 	],
 	[
-		"silver",
+		"gold",
 		{
-			color: "#EFC700",
-			benefits: [],
+			color: "#dFb700",
+			benefits: [
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor"
+			],
 			price: 300
 		}
 	],
+	[
+		"gold",
+		{
+			color: "#dFb700",
+			benefits: [
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor",
+				"Lorem ipsum dolor"
+			],
+			price: 300
+		}
+	]
 ];
 
+const topTiers = [0, 1, 2];
+
 const SupportContainer = styled.section`
-	height: 100vh;
-	margin-top: 4em;
-	/* padding: 1em; */
+	min-height: 100vh;
+	background-color: #f4f4f4;
+	overflow: auto;
 
 	.section-title {
 		font-size: 3em;
-		margin: 1rem 2rem;
+		margin: 2rem auto 1rem auto;
 		text-align: center;
 	}
 	.sponsor-list {
+		overflow: auto visible;
 		display: flex;
-		padding: 0rem 1em;
-		overflow: auto hidden;
+		padding: 3rem 1em;
 		width: 100%;
+		margin: auto;
 		box-sizing: border-box;
 
 		scroll-snap-type: x mandatory;
@@ -168,10 +196,6 @@ const SupportContainer = styled.section`
 			display: none;
 		}
 	}
-	.support-us-container {
-		background-color: #f8f8f8;
-		padding: 3em;
-	}
 	.support-us {
 		width: 90%;
 		margin: auto;
@@ -180,21 +204,30 @@ const SupportContainer = styled.section`
 		flex-wrap: wrap;
 		justify-content: center;
 
-
 		/* grid-template-columns: 1fr 1fr 1fr 1fr; */
+	}
+
+	.top-pricing {
+		display: flex;
+		width: 70%;
+		margin: auto;
+		justify-content: center;
+		align-items: center;
 	}
 `;
 
 const SponsorCard = styled.div`
 	flex: 0 0 18em;
 	margin: 1em;
-	border: 1.15px solid rgba(0, 0, 0, 0.15);
+	/* border: 1.15px solid rgba(0, 0, 0, 0.15); */
 	border-radius: 5px;
 
 	display: flex;
 	flex-direction: column;
 
 	color: rgba(0, 0, 0, 0.75);
+	background-color: #fff;
+	box-shadow: 0px 30px 30px -30px rgba(0, 0, 0, 0.25);
 
 	transition: box-shadow 0.25s ease-in-out, border 0.25s ease-in-out,
 		transform 0.25s ease-in-out;
@@ -203,9 +236,10 @@ const SponsorCard = styled.div`
 	scroll-snap-align: start;
 
 	:hover {
-		box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.3);
-		border: 1.15px solid rgba(0, 0, 0, 0.1);
-		transform: scale(1.01);
+		box-shadow: 0px 30px 30px -25px rgba(0, 0, 0, 0.25);
+
+		/* border: 1.15px solid rgba(0, 0, 0, 0.1); */
+		transform: scale(1.02);
 	}
 
 	.card-content {
@@ -256,7 +290,9 @@ const SponsorLogo = styled.div`
 		background-repeat: no-repeat;
 	}
 `;
-const Sponsor = ({ sponsor: { name, tier, image, desc, color = "#fff", site } }) => {
+const Sponsor = ({
+	sponsor: { name, tier, image, desc, color = "#fff", site }
+}) => {
 	return (
 		<SponsorCard>
 			<SponsorLogo color={color} src={image}>
@@ -269,85 +305,92 @@ const Sponsor = ({ sponsor: { name, tier, image, desc, color = "#fff", site } })
 				</div>
 				<div className="desc">{desc}</div>
 			</div>
-			{<div>
-				<a href = {site}>Visit Site</a>
-			</div>}
+			{/* <div>
+					<a href={site}>Visit Site</a>
+				</div> */}
 		</SponsorCard>
 	);
 };
 
-const TierCard = styled.div`
-	flex: 0 0 12em;
+const TierContainer = styled.div`
+	display: flex;
+	justify-content: space-between;
+	flex-basis: 30%;
 
-	text-align: center;
-	background-color: #fff;
+	margin: 2em;
 	padding: 2em;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	height: 20em;
-	transition: box-shadow 0.25s ease-in-out, border 0.25s ease-in-out,
-		transform 0.25s ease-in-out;
-	cursor: pointer;
 
-	:hover {
-		box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.3);
-		border: 1.15px solid rgba(0, 0, 0, 0.1);
-		transform: scale(1.01);
+	background-color: #fff;
+	color: #333;
+
+	align-items: center;
+
+	box-shadow: 0px 30px 35px -30px rgba(0, 0, 0, 0.15);
+
+	hr {
+		margin: 0.5em auto;
+		border: none;
+		box-shadow: none;
+		width: 100%;
+		height: 2px;
+		background-color: rgba(0, 0, 0, 0.075);
 	}
 
-	.name,
-	.price {
-		/* padding: 1rem; */
-		/* border-bottom: 1px solid #ddd; */
+	.tier-name {
 		text-transform: capitalize;
-		font-size: 1.2em;
+		font-size: 1.5em;
+		margin: 0.5em 0em;
 	}
+	.pricing {
+		font-size: 2em;
+		margin: 0.5em 0em;
 
-	.price {
-		font-size: 3em;
-	}
-
-	.benefits {
-		text-align: center;
-		list-style-type: none;
-		padding: 0px;
-		li {
-			&::before {
-				background-image: url("/checkmark.png");
-				background-size: contain;
-				background-position: center;
-				display: inline-block;
-				width: 1em;
-				height: 1em;
-				content: "";
-				transform: translateX(-1em);
-			}
-
-			/* background: url("checkmark.png") no-repeat left center;
-			background-size: contain; */
-			margin: 5px;
+		:before {
+			content: "$";
+			font-size: 0.65em;
+			vertical-align: top;
 		}
 	}
+	.benefits {
+		list-style-type: none;
+		padding: 0px;
+	}
+	.callToAction {
+	}
+`;
+const TierCard = styled(TierContainer)`
+	flex-direction: column;
+
+	button {
+		margin: 1em 0em 0em 0em;
+		width: 100%;
+	}
+
+	:nth-child(1) {
+		order: 2;
+	}
+
+	:nth-child(2) {
+		order: 1;
+	}
+	:nth-child(3) {
+		order: calc(100%);
+	}
+
+`;
+const TierRow = styled(TierContainer)`
+	flex-direction: row;
+	width: 80%;
+	margin: 2em auto;
+	padding: 1em 4em;
 `;
 
-const Benefit = ({ b }) => <li>{b}</li>;
-const Tier = ({ name, tier: { color, benefits, price } }) => {
-	return (
-		<TierCard>
-			<div className="name">{price}</div>
-			<div className="price">{name}</div>
-			<ul className="benefits">
-				{benefits.map(b => (
-					<Benefit b={b}></Benefit>
-				))}
-			</ul>
-		</TierCard>
-	);
-};
+const Benefit = styled.li``;
 
 export default () => {
 	return (
 		<>
-			{/* <Nav></Nav> */}
+			<Nav></Nav>
 			<SupportContainer>
 				<h1 className="section-title">Our sponsors</h1>
 				<div className="sponsor-list">
@@ -355,11 +398,49 @@ export default () => {
 						<Sponsor sponsor={s} />
 					))}
 				</div>
-				<div className="support-us-container">
+				<div id="support" className="support-us-container">
 					<h1 className="section-title">Sponsor us</h1>
-					<div id="#support" className="support-us">
-						{tierInfo.map(([name, tier]) => (
-							<Tier name={name} tier={tier} />
+					<div className="top-pricing">
+						{topTiers
+							.map(a => tierInfo[a])
+							.map(([name, info]) => (
+								<TierCard>
+									<h3 className="tier-name">{name}</h3>
+									<hr />
+									<h2 className="pricing">{info.price}</h2>
+									<hr />
+									<ul className="benefits">
+										{info.benefits.map(b => (
+											<Benefit>{b}</Benefit>
+										))}
+									</ul>
+									<hr />
+									<Button
+										color="white"
+										background="#090"
+										className="call-to-action">
+										Support us
+									</Button>
+								</TierCard>
+							))}
+					</div>
+					<div className="all-pricing">
+						{tierInfo.map(([name, info]) => (
+							<TierRow>
+								<h3 className="tier-name">{name}</h3>
+								<h2 className="pricing">{info.price}</h2>
+								<ul className="benefits">
+									{info.benefits.map(b => (
+										<Benefit>{b}</Benefit>
+									))}
+								</ul>
+								<Button
+									color="white"
+									background="#090"
+									className="call-to-action">
+									Support us
+								</Button>
+							</TierRow>
 						))}
 					</div>
 				</div>

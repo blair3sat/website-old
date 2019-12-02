@@ -14,12 +14,8 @@ const Global = createGlobalStyle`
 			h1, h2, h3, h4, h5, h6 {
 				font-family: "Montserrat";
 			}
+			overflow-x: hidden;
 		}
-	input[type=range][vertical=true] {
-		transform: rotate(270deg);
-
-		writing-mode: vertical-rl;
-	}
 `;
 
 export default class MyDocument extends Document {
@@ -36,10 +32,10 @@ export default class MyDocument extends Document {
 		return (
 			<html>
 				<Head>
-					<title>Blair3sat</title>
+					{/* <title>Blair3sat</title> */}
 					<link rel="icon" href="/favicon.ico" />
 					<link
-						href="https://fonts.googleapis.com/css?family=Roboto|Montserrat:600|Raleway&display=swap"
+						href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:600"
 						rel="stylesheet"
 					/>
 					{this.props.styleTags}
@@ -58,7 +54,7 @@ export default class MyDocument extends Document {
 							Support us
 						</SupportButton>
 					</Link>
-					<Nav></Nav>
+					{/* <Nav></Nav> */}
 					<Main />
 					<NextScript />
 				</body>

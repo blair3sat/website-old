@@ -60,26 +60,38 @@ const AboutUsContainer = styled.section`
 	background-color: #eee;
 	overflow: auto;
 
+	.section-title{
+		font-size: 4em;
+		margin: 1em auto 1rem auto;
+		text-align: center;
+	}
+	hr {
+		margin: auto;
+		border: none;
+		box-shadow: none;
+		width: 3em;
+		height: 6px;
+		background-color: #4b4;
+	}
+
 	.item {
 		padding: 3em 10%;
-		font-size: 1.25em;
+		font-size: 1.5em;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		overflow: visible;
 
-		.title {
-			margin: 0px;
+		&:first-child {
+			margin-top: 5em;
 		}
 
 		hr {
 			margin: 1.25em 0em;
-			border: none;
-			box-shadow: none;
-			width: 3em;
-			height: 6px;
-			background-color: #4b4;
+		}
 
+		.title {
+			margin: 0px;
 		}
 
 		.text {
@@ -89,7 +101,8 @@ const AboutUsContainer = styled.section`
 		.desc {
 			background-color: #fff;
 			padding: 3em;
-			box-shadow: 3px 3px 30px 0px rgba(0, 0, 0, 0.15);
+			box-shadow: 0px 30px 30px -30px rgba(0, 0, 0, 0.25);
+			/* box-shadow: 3px 3px 30px 0px rgba(0, 0, 0, 0.15); */
 
 			padding-right: 7em;
 			flex-basis: 50%;
@@ -98,10 +111,12 @@ const AboutUsContainer = styled.section`
 		.image {
 			flex-basis: 25%;
 			display: block;
-			width: 300px;
-			height: 400px;
+			width: 400px;
+			height: 500px;
+
 			margin: 3em -4em -4em -4em;
-			box-shadow: 3px 3px 40px 0px rgba(0, 0, 0, 0.15);
+			box-shadow: 0px 30px 40px -30px rgba(0, 0, 0, 0.25);
+			/* box-shadow: 3px 3px 40px 0px rgba(0, 0, 0, 0.15); */
 		}
 		.actions {
 			margin-top: 1em;
@@ -162,10 +177,12 @@ const Home = () => {
 				</div>
 			</LandingContainer>
 			<AboutUsContainer>
+				<h1 className="section-title">About</h1>
+				<hr />
 				<div className="item">
 					<div className="desc">
 						<h2 className="title">Who are we?</h2>
-						<hr/>
+						<hr />
 						<p className="text">
 							Blair3sat an entirely student-run cubesat team at
 							Montgomery Blair High School. Our satellite will
@@ -185,7 +202,7 @@ const Home = () => {
 						</div>
 					</div>
 					<img
-						src="https://via.placeholder.com/300x400"
+						src="https://via.placeholder.com/400x500"
 						alt=""
 						className="image"
 					/>
@@ -199,7 +216,7 @@ const Home = () => {
 				<div className="item">
 					<div className="desc">
 						<h2 className="title">Our mission</h2>
-						<hr/>
+						<hr />
 						<p className="text">
 							Our nanosatellite will measure the electron density
 							of the ionosphere to map how radio frequency (RF)
@@ -226,7 +243,7 @@ const Home = () => {
 						</div>
 					</div>
 					<img
-						src="https://via.placeholder.com/300x400"
+						src="https://via.placeholder.com/400x500"
 						alt=""
 						className="image"
 					/>
