@@ -4,6 +4,9 @@ import { Button } from "../pages/index";
 import * as THREE from "three";
 import Link from "next/link";
 
+
+
+
 const fadeInUp = keyframes`
 	from {
 		transform: translate3d(0,40px,0)
@@ -24,6 +27,11 @@ export const LandingContainer = styled.section`
   color: #eee;
   z-index: 2;
 
+
+  .custom-bg {
+    // position: absolute;
+  }
+
   .globe {
     width: 55vw;
     position: absolute;
@@ -32,7 +40,7 @@ export const LandingContainer = styled.section`
     right: 0px;
     bottom: 50%;
 
-    transform: scaleY(-1) translateX(-50%);
+    transform: scaleY(-1) translate(-50%, 0%);
 
     pointer-events: none;
   }

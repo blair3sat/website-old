@@ -1,10 +1,11 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState, useLayoutEffect, Component } from "react";
 import styled from "styled-components";
 import { Button } from "../components/Button";
 import Nav from "../components/nav";
 import { SmallSat } from "../components/Smallsat";
 
+import { Parallax, Background } from "react-parallax";
 import { LandingContainer } from "../components/Landing";
 
 const AboutUsContainer = styled.section`
@@ -53,7 +54,6 @@ const AboutUsContainer = styled.section`
       background-color: #fff;
       padding: 3em;
       box-shadow: 0px 30px 30px -30px rgba(0, 0, 0, 0.25);
-      /* box-shadow: 3px 3px 30px 0px rgba(0, 0, 0, 0.15); */
 
       padding-right: 7em;
       flex-basis: 50%;
@@ -94,13 +94,37 @@ export const Centered = styled.div`
   align-items: center;
 `;
 
-const Home = () => {
-  return (
-    <>
-      <Nav />
+class Landing extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      scroll: 0
+    };
+  }
+
+  componentDidMount() {
+    console.log("asdf");
+    document.body.addEventListener("scroll", () => {
+      this.setState({
+        scroll: window.scrollTop / window.innerHeight
+      });
+    });
+  }
+
+  render() {
+    // if (process.browser) console.log("asdf");
+
+    const { scroll } = this.state;
+
+    return (
       <LandingContainer>
         <img className="globe" src="/earth8.jpg" alt="" />
-        <div className="content">
+        <div
+          className="content"
+          style={{
+            transform: `translateY(${scroll * 100}%);`
+          }}
+        >
           <h1 className="title animated">blair3sat</h1>
           <p className="desc animated">
             An entirely student-run cubesat team at Montgomery Blair High School
@@ -128,6 +152,14 @@ const Home = () => {
           </div>
         </div>
       </LandingContainer>
+    );
+  }
+}
+const Home = () => {
+  return (
+    <>
+      <Nav />
+      <Landing />
       <AboutUsContainer>
         <h1 className="section-title">About</h1>
         <hr />
@@ -196,5 +228,4 @@ const Home = () => {
     </>
   );
 };
-
 export default Home;
