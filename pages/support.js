@@ -202,9 +202,18 @@ const SupportContainer = styled.section`
     /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   }
 
+  .top-pricing-container {
+      width: 100vw;
+      overflow: auto;
+    scroll-snap-type: x mandatory;
+
+  }
+
   .top-pricing {
     display: flex;
-    width: 70%;
+    // width: 70%;
+    // width: 100%;
+    // overflow-x: auto;
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -231,7 +240,7 @@ const SponsorCard = styled.div`
   scroll-snap-align: start;
 
   :hover {
-    box-shadow: 0px 30px 30px -25px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 35px 35px -35px rgba(0, 0, 0, 0.25);
 
     /* border: 1.15px solid rgba(0, 0, 0, 0.1); */
     transform: scale(1.02);
@@ -266,6 +275,7 @@ const SponsorCard = styled.div`
   }
 `;
 const SponsorLogo = styled.div`
+    // max-width: 400px;
 	min-height: 10em;
 	padding: 1em;
 	/* background-color: ${p => p.color}; */
@@ -311,6 +321,8 @@ const TierContainer = styled.div`
   display: flex;
   justify-content: space-between;
   flex-basis: 30%;
+
+  box-sizing: border-box;
 
   margin: 2em;
   padding: 2em;
@@ -359,30 +371,35 @@ const TierContainer = styled.div`
 const TierCard = styled(TierContainer)`
   flex-direction: column;
 
+  scroll-snap-align: center;
+    min-width: 300px;
+    max-width: 350px;
+    // min-width: 250px;
+
   button {
     margin: 1em 0em 0em 0em;
     width: 100%;
   }
 
   &:nth-child(1) {
-    order: 2;
+    // order: 2;
     height: calc(100% + 4em);
     border: 3px solid rgba(0, 153, 0, 0.75);
   }
 
   &:nth-child(2) {
-    order: 1;
+    // order: 1;
     height: calc(100% + 2em);
   }
   &:nth-child(3) {
-    order: 3;
+    // order: 3;
   }
 `;
 const TierRow = styled(TierContainer)`
   flex-direction: row;
   width: 80%;
   margin: 2em auto;
-  padding: 1em 4em;
+  padding: 1em 3%;
 
   .tier-name {
   }
@@ -409,6 +426,7 @@ export default () => {
         </div>
         <div id="support" className="support-us-container">
           <h1 className="section-title">Sponsor us</h1>
+          <div className="top-pricing-container">
           <div className="top-pricing">
             {topTiers
               .map(a => tierInfo[a])
@@ -433,6 +451,7 @@ export default () => {
                   </Button>
                 </TierCard>
               ))}
+              </div>
           </div>
           <hr className="all" />
           {/* <hr className="all" /> */}
