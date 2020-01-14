@@ -1,14 +1,33 @@
-import Document, { Head, Main, NextScript } from "next/document";
-// Import styled components ServerStyleSheet
+// import Document, { Html, Head, Main, NextScript } from 'next/document'
+
+// class MyDocument extends Document {
+//   static async getInitialProps(ctx) {
+//     const initialProps = await Document.getInitialProps(ctx)
+//     return { ...initialProps }
+//   }
+
+//   render() {
+//     return (
+//       <Html>
+//         <Head />
+//         <body>
+//           <Main />
+//           <NextScript />
+//         </body>
+//       </Html>
+//     )
+//   }
+// }
+
+// export default MyDocument
+
+import Document, { Html, Head, Main, NextScript } from "next/document";
 import styled, { createGlobalStyle, ServerStyleSheet } from "styled-components";
 import Link from "next/link";
 import Nav from "../components/nav";
 
 import { SupportButton } from "../components/Button";
 
-// const Global = createGlobalStyle`
-
-// `;
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -22,9 +41,8 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html>
+      <Html>
         <Head>
-          {/* <title>Blair3sat</title> */}
           <link rel="icon" href="/favicon.ico" />
           <link
             href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:600"
@@ -46,14 +64,14 @@ export default class MyDocument extends Document {
             }`}
           </style>
           <Main />
-          <Link href="/support">
+          {/* <Link href="/support">
             <SupportButton className="scale" background="#090" color="#fff">
               Support us
             </SupportButton>
-          </Link>
+          </Link> */}
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
