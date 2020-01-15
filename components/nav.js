@@ -7,7 +7,8 @@ const links = [
   { href: "/mission", label: "Our Mission" },
   { href: "/support", label: "Support us" },
   { href: "/support", label: "Sponsors" },
-  { href: "/blog", label: "Blog" }
+  { href: "/blog", label: "Blog" },
+  { href: "/team", label: "Team" }
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`;
   return link;
