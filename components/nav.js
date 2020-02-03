@@ -7,8 +7,8 @@ const links = [
   { href: "/mission", label: "Our Mission" },
   { href: "/support", label: "Support us" },
   { href: "/support", label: "Sponsors" },
-  { href: "/blog", label: "Blog" },
-  { href: "/team", label: "Team" }
+  // { href: "/blog", label: "Blog" },
+//   { href: "/team", label: "Team" }
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`;
   return link;
@@ -29,17 +29,23 @@ const NavContainer = styled.nav`
   padding: 0em 15%;
   display: flex;
   align-items: center;
+  overflow: auto;
+
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
     padding: 1em;
     right: unset;
     bottom: 0px;
-    z-index: -1;
+    height: 4.5em;
+
+    .logo{
+      margin: auto;
+    }
 
     .links {
-      flex-direction: column;
       padding: 0px;
+
     }
   }
 
