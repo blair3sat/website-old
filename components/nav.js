@@ -5,7 +5,7 @@ import styled from "styled-components";
 const links = [
   { href: "/", label: "Home" },
   { href: "/mission", label: "Our Mission" },
-  { href: "/support", label: "Support us" },
+  { href: "/support#support", label: "Support us" },
   { href: "/support", label: "Sponsors" },
   // { href: "/blog", label: "Blog" },
 //   { href: "/team", label: "Team" }
