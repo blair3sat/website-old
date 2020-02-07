@@ -8,7 +8,7 @@ const sponsors = [
 	{
 		name: "Maryland Space Business Roundtable",
 		tier: "Silver",
-		image: "/msbr_orig-324c71370056ff1e6a0a34f3659dcafd.png",
+		image: "/static/msbr_orig-324c71370056ff1e6a0a34f3659dcafd.png",
 		desc:
 			"Thanks to MSBR we were able to purchase new electronics for development.",
 		site: "http://www.mdspace.org/"
@@ -16,7 +16,7 @@ const sponsors = [
 	{
 		name: "MBHS Magnet Foundation",
 		tier: "Bronze",
-		image: "/magnet-7a0f6626331d50517d6be2df2d051931.png",
+		image: "/static/magnet-7a0f6626331d50517d6be2df2d051931.png",
 		desc:
 			"Thanks to the MBHS Magnet Foundation we could attend the 2019 SmallSat conference.",
 		color: "#701",
@@ -25,7 +25,7 @@ const sponsors = [
 	{
 		name: "Overleaf",
 		tier: "Steel",
-		image: "/overleaf-9616755adf07d8ee303b89a18d9598ba.png",
+		image: "/static/overleaf-9616755adf07d8ee303b89a18d9598ba.png",
 		desc:
 			"Thanks to MSBR we were able to purchase new electronics for development.",
 		site: "https://www.overleaf.com/"
@@ -33,7 +33,7 @@ const sponsors = [
 	{
 		name: "Nyrad",
 		tier: "Steel",
-		image: "/nyrad-306a2879821e4a3f36eae64972c2c670.png",
+		image: "/static/nyrad-306a2879821e4a3f36eae64972c2c670.png",
 		desc:
 			"Thanks to NYRAD, we have bolstered our CSLI application with letters of support and established connections within the aerospace community.",
 		site: "https://nyradspace.com/"
@@ -41,7 +41,7 @@ const sponsors = [
 	{
 		name: "Micro Aerospace Solultions",
 		tier: "Support",
-		image: "/MicroALogo.png",
+		image: "/static/MicroALogo.png",
 		desc:
 			"Thanks to Micro Aerospace we were able to strengthen our CSLI application with letters of support, and have a greater understanding of the aerospace industry as a whole.",
 		site: "https://www.micro-a.net/"
