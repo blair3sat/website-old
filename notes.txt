@@ -1,0 +1,24 @@
+Contact
+
+Home:
+    CSLI/Materials
+    Smallsat
+    Fliers
+    Optical/RF paper
+
+Sponsor
+    Sponsor importance
+    Sponsor us pricing
+    Contact
+    Share/Social media
+    Go fund me
+
+Team images / descriptions
+Responsive layout
+
+404
+
+Main parallax
+Better Navbar styles
+Navbar responsiveness
+Logo
